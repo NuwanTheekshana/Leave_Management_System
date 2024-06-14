@@ -56,51 +56,71 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.emp_datagrid_view = new System.Windows.Forms.DataGridView();
+            this.Emp_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Fname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Lname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emp_Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.emp_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_contact_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emp_refresh_btn = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.add_emp_btn = new System.Windows.Forms.Button();
+            this.emp_password_txt = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.emp_email_txt = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.emp_type_box = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.emp_contact_txt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dob_datepicker = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.gender_box = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.emp_lname_txt = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.emp_fname_txt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.leave_request = new System.Windows.Forms.TabPage();
+            this.leave_request_gridview = new System.Windows.Forms.DataGridView();
+            this.leave_request_refresh_btn = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.logout_btn = new System.Windows.Forms.Button();
             this.admin_email_lbl = new System.Windows.Forms.Label();
             this.admin_username_lbl = new System.Windows.Forms.Label();
             this.admin_id_lbl = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Employee_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leave_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leave_purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leave_start_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leave_end_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.leave_count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.approve = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.reject = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdminListGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.emp_datagrid_view)).BeginInit();
             this.panel1.SuspendLayout();
+            this.leave_request.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leave_request_gridview)).BeginInit();
+            this.panel5.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -108,7 +128,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.leave_request);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(-1, 3);
@@ -122,7 +142,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(924, 420);
+            this.tabPage1.Size = new System.Drawing.Size(924, 553);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -411,30 +431,29 @@
             this.label1.Size = new System.Drawing.Size(186, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Admin Registration";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.button2);
+            this.tabPage3.Controls.Add(this.emp_datagrid_view);
+            this.tabPage3.Controls.Add(this.emp_refresh_btn);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.panel4);
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.add_emp_btn);
+            this.tabPage3.Controls.Add(this.emp_password_txt);
             this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.emp_email_txt);
             this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.emp_type_box);
             this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.emp_contact_txt);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.dateTimePicker1);
+            this.tabPage3.Controls.Add(this.dob_datepicker);
             this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.gender_box);
             this.tabPage3.Controls.Add(this.label11);
-            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.emp_lname_txt);
             this.tabPage3.Controls.Add(this.label10);
-            this.tabPage3.Controls.Add(this.textBox1);
+            this.tabPage3.Controls.Add(this.emp_fname_txt);
             this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -444,17 +463,250 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Employee Registration";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // textBox3
+            // emp_datagrid_view
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(202, 162);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 26);
-            this.textBox3.TabIndex = 34;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.emp_datagrid_view.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.emp_datagrid_view.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emp_datagrid_view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.emp_datagrid_view.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Emp_id,
+            this.Emp_Fname,
+            this.Emp_Lname,
+            this.emp_status,
+            this.Emp_Type,
+            this.dataGridViewButtonColumn1,
+            this.dataGridViewButtonColumn2,
+            this.emp_email,
+            this.emp_gender,
+            this.DOB,
+            this.emp_contact_no});
+            this.emp_datagrid_view.Location = new System.Drawing.Point(3, 362);
+            this.emp_datagrid_view.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_datagrid_view.Name = "emp_datagrid_view";
+            this.emp_datagrid_view.RowHeadersWidth = 51;
+            this.emp_datagrid_view.RowTemplate.Height = 24;
+            this.emp_datagrid_view.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.emp_datagrid_view.Size = new System.Drawing.Size(919, 195);
+            this.emp_datagrid_view.TabIndex = 46;
+            this.emp_datagrid_view.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.emp_datagrid_view_CellContentClick);
+            // 
+            // Emp_id
+            // 
+            this.Emp_id.DataPropertyName = "emp_id";
+            this.Emp_id.Frozen = true;
+            this.Emp_id.HeaderText = "Id";
+            this.Emp_id.MinimumWidth = 6;
+            this.Emp_id.Name = "Emp_id";
+            this.Emp_id.Width = 125;
+            // 
+            // Emp_Fname
+            // 
+            this.Emp_Fname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Emp_Fname.DataPropertyName = "emp_fname";
+            this.Emp_Fname.HeaderText = "First Name";
+            this.Emp_Fname.MinimumWidth = 6;
+            this.Emp_Fname.Name = "Emp_Fname";
+            // 
+            // Emp_Lname
+            // 
+            this.Emp_Lname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Emp_Lname.DataPropertyName = "emp_lname";
+            this.Emp_Lname.HeaderText = "Last Name";
+            this.Emp_Lname.MinimumWidth = 6;
+            this.Emp_Lname.Name = "Emp_Lname";
+            // 
+            // emp_status
+            // 
+            this.emp_status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emp_status.DataPropertyName = "emp_status";
+            this.emp_status.HeaderText = "Status";
+            this.emp_status.MinimumWidth = 6;
+            this.emp_status.Name = "emp_status";
+            // 
+            // Emp_Type
+            // 
+            this.Emp_Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Emp_Type.DataPropertyName = "emp_type";
+            this.Emp_Type.HeaderText = "Employee Type";
+            this.Emp_Type.MinimumWidth = 6;
+            this.Emp_Type.Name = "Emp_Type";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn1.HeaderText = "Update";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "Update";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewButtonColumn2.HeaderText = "Delete";
+            this.dataGridViewButtonColumn2.MinimumWidth = 6;
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn2.Text = "Delete";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            // 
+            // emp_email
+            // 
+            this.emp_email.DataPropertyName = "emp_email";
+            this.emp_email.HeaderText = "Email";
+            this.emp_email.Name = "emp_email";
+            this.emp_email.Visible = false;
+            // 
+            // emp_gender
+            // 
+            this.emp_gender.DataPropertyName = "emp_gender";
+            this.emp_gender.HeaderText = "Gender";
+            this.emp_gender.Name = "emp_gender";
+            this.emp_gender.Visible = false;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "emp_birth_day";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.Name = "DOB";
+            this.DOB.Visible = false;
+            // 
+            // emp_contact_no
+            // 
+            this.emp_contact_no.DataPropertyName = "emp_contact_no";
+            this.emp_contact_no.HeaderText = "Contact No";
+            this.emp_contact_no.Name = "emp_contact_no";
+            this.emp_contact_no.Visible = false;
+            // 
+            // emp_refresh_btn
+            // 
+            this.emp_refresh_btn.Location = new System.Drawing.Point(848, 337);
+            this.emp_refresh_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_refresh_btn.Name = "emp_refresh_btn";
+            this.emp_refresh_btn.Size = new System.Drawing.Size(56, 19);
+            this.emp_refresh_btn.TabIndex = 45;
+            this.emp_refresh_btn.Text = "Refresh";
+            this.emp_refresh_btn.UseVisualStyleBackColor = true;
+            this.emp_refresh_btn.Click += new System.EventHandler(this.emp_refresh_btn_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(397, 332);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(220, 24);
+            this.label17.TabIndex = 44;
+            this.label17.Text = "Employee Registration";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel4.Location = new System.Drawing.Point(-4, 309);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(932, 10);
+            this.panel4.TabIndex = 43;
+            // 
+            // add_emp_btn
+            // 
+            this.add_emp_btn.BackColor = System.Drawing.Color.White;
+            this.add_emp_btn.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.add_emp_btn.FlatAppearance.BorderSize = 3;
+            this.add_emp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_emp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_emp_btn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.add_emp_btn.Location = new System.Drawing.Point(408, 264);
+            this.add_emp_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.add_emp_btn.Name = "add_emp_btn";
+            this.add_emp_btn.Size = new System.Drawing.Size(147, 36);
+            this.add_emp_btn.TabIndex = 42;
+            this.add_emp_btn.Text = "Add Employee";
+            this.add_emp_btn.UseVisualStyleBackColor = false;
+            this.add_emp_btn.Click += new System.EventHandler(this.add_emp_btn_Click);
+            // 
+            // emp_password_txt
+            // 
+            this.emp_password_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emp_password_txt.Location = new System.Drawing.Point(653, 214);
+            this.emp_password_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_password_txt.Name = "emp_password_txt";
+            this.emp_password_txt.Size = new System.Drawing.Size(222, 26);
+            this.emp_password_txt.TabIndex = 41;
+            this.emp_password_txt.UseSystemPasswordChar = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(505, 214);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(86, 20);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "Password";
+            // 
+            // emp_email_txt
+            // 
+            this.emp_email_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emp_email_txt.Location = new System.Drawing.Point(653, 162);
+            this.emp_email_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_email_txt.Name = "emp_email_txt";
+            this.emp_email_txt.Size = new System.Drawing.Size(222, 26);
+            this.emp_email_txt.TabIndex = 39;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(505, 163);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 20);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "Email";
+            // 
+            // emp_type_box
+            // 
+            this.emp_type_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.emp_type_box.FormattingEnabled = true;
+            this.emp_type_box.Items.AddRange(new object[] {
+            "Permanent",
+            "Non Permanent"});
+            this.emp_type_box.Location = new System.Drawing.Point(202, 212);
+            this.emp_type_box.Name = "emp_type_box";
+            this.emp_type_box.Size = new System.Drawing.Size(222, 28);
+            this.emp_type_box.TabIndex = 37;
+            this.emp_type_box.Text = "Select Employee Type";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(28, 212);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(130, 20);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Employee Type";
+            // 
+            // emp_contact_txt
+            // 
+            this.emp_contact_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emp_contact_txt.Location = new System.Drawing.Point(202, 162);
+            this.emp_contact_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_contact_txt.Name = "emp_contact_txt";
+            this.emp_contact_txt.Size = new System.Drawing.Size(222, 26);
+            this.emp_contact_txt.TabIndex = 34;
+            this.emp_contact_txt.TextChanged += new System.EventHandler(this.emp_contact_txt_TextChanged);
+            this.emp_contact_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emp_contact_txt_KeyPress);
             // 
             // label13
             // 
@@ -468,16 +720,16 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "Contact Number";
             // 
-            // dateTimePicker1
+            // dob_datepicker
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(653, 115);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 26);
-            this.dateTimePicker1.TabIndex = 32;
+            this.dob_datepicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dob_datepicker.CustomFormat = "dd-MM-yyyy";
+            this.dob_datepicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dob_datepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dob_datepicker.Location = new System.Drawing.Point(653, 115);
+            this.dob_datepicker.Name = "dob_datepicker";
+            this.dob_datepicker.Size = new System.Drawing.Size(222, 26);
+            this.dob_datepicker.TabIndex = 32;
             // 
             // label12
             // 
@@ -490,17 +742,18 @@
             this.label12.TabIndex = 30;
             this.label12.Text = "Date of Birth";
             // 
-            // comboBox1
+            // gender_box
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.gender_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.gender_box.FormattingEnabled = true;
+            this.gender_box.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(202, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(222, 28);
-            this.comboBox1.TabIndex = 29;
+            this.gender_box.Location = new System.Drawing.Point(202, 110);
+            this.gender_box.Name = "gender_box";
+            this.gender_box.Size = new System.Drawing.Size(222, 28);
+            this.gender_box.TabIndex = 29;
+            this.gender_box.Text = "Select Gender";
             // 
             // label11
             // 
@@ -513,14 +766,14 @@
             this.label11.TabIndex = 28;
             this.label11.Text = "Gender";
             // 
-            // textBox2
+            // emp_lname_txt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(653, 69);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 26);
-            this.textBox2.TabIndex = 27;
+            this.emp_lname_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emp_lname_txt.Location = new System.Drawing.Point(653, 69);
+            this.emp_lname_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_lname_txt.Name = "emp_lname_txt";
+            this.emp_lname_txt.Size = new System.Drawing.Size(222, 26);
+            this.emp_lname_txt.TabIndex = 27;
             // 
             // label10
             // 
@@ -532,16 +785,15 @@
             this.label10.Size = new System.Drawing.Size(95, 20);
             this.label10.TabIndex = 26;
             this.label10.Text = "Last Name";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // textBox1
+            // emp_fname_txt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(202, 63);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 26);
-            this.textBox1.TabIndex = 25;
+            this.emp_fname_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emp_fname_txt.Location = new System.Drawing.Point(202, 63);
+            this.emp_fname_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.emp_fname_txt.Name = "emp_fname_txt";
+            this.emp_fname_txt.Size = new System.Drawing.Size(222, 26);
+            this.emp_fname_txt.TabIndex = 25;
             // 
             // label9
             // 
@@ -576,24 +828,84 @@
             this.label2.Size = new System.Drawing.Size(220, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Employee Registration";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // tabPage4
+            // leave_request
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(924, 420);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Leave Request";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.leave_request.Controls.Add(this.leave_request_gridview);
+            this.leave_request.Controls.Add(this.leave_request_refresh_btn);
+            this.leave_request.Controls.Add(this.panel5);
+            this.leave_request.Location = new System.Drawing.Point(4, 22);
+            this.leave_request.Name = "leave_request";
+            this.leave_request.Padding = new System.Windows.Forms.Padding(3);
+            this.leave_request.Size = new System.Drawing.Size(924, 553);
+            this.leave_request.TabIndex = 3;
+            this.leave_request.Text = "Leave Request";
+            this.leave_request.UseVisualStyleBackColor = true;
+            // 
+            // leave_request_gridview
+            // 
+            this.leave_request_gridview.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.leave_request_gridview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.leave_request_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.leave_request_gridview.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Employee_Name,
+            this.leave_type,
+            this.leave_purpose,
+            this.leave_start_date,
+            this.leave_end_date,
+            this.leave_count,
+            this.approve,
+            this.reject});
+            this.leave_request_gridview.Location = new System.Drawing.Point(3, 89);
+            this.leave_request_gridview.Margin = new System.Windows.Forms.Padding(2);
+            this.leave_request_gridview.Name = "leave_request_gridview";
+            this.leave_request_gridview.RowHeadersWidth = 51;
+            this.leave_request_gridview.RowTemplate.Height = 24;
+            this.leave_request_gridview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.leave_request_gridview.Size = new System.Drawing.Size(921, 462);
+            this.leave_request_gridview.TabIndex = 48;
+            // 
+            // leave_request_refresh_btn
+            // 
+            this.leave_request_refresh_btn.Location = new System.Drawing.Point(853, 64);
+            this.leave_request_refresh_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.leave_request_refresh_btn.Name = "leave_request_refresh_btn";
+            this.leave_request_refresh_btn.Size = new System.Drawing.Size(56, 19);
+            this.leave_request_refresh_btn.TabIndex = 47;
+            this.leave_request_refresh_btn.Text = "Refresh";
+            this.leave_request_refresh_btn.UseVisualStyleBackColor = true;
+            this.leave_request_refresh_btn.Click += new System.EventHandler(this.leave_request_refresh_btn_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel5.Controls.Add(this.label18);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(918, 44);
+            this.panel5.TabIndex = 23;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(364, 9);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(159, 24);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Leave Requests";
             // 
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(924, 420);
+            this.tabPage5.Size = new System.Drawing.Size(924, 553);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Reports";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -607,7 +919,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(924, 420);
+            this.tabPage6.Size = new System.Drawing.Size(924, 553);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "User Profile";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -657,200 +969,64 @@
             this.admin_id_lbl.TabIndex = 6;
             this.admin_id_lbl.Text = "User Id";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(28, 212);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 20);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Employee Type";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Permanent",
-            "Non Permanent"});
-            this.comboBox2.Location = new System.Drawing.Point(202, 212);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(222, 28);
-            this.comboBox2.TabIndex = 37;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(653, 162);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 26);
-            this.textBox4.TabIndex = 39;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(505, 163);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 20);
-            this.label15.TabIndex = 38;
-            this.label15.Text = "Email";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(653, 214);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 26);
-            this.textBox5.TabIndex = 41;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(505, 214);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 20);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "Password";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button1.Location = new System.Drawing.Point(408, 264);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 36);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Add Employee";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel4.Location = new System.Drawing.Point(-4, 309);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(932, 10);
-            this.panel4.TabIndex = 43;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(848, 337);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 19);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(397, 332);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(220, 24);
-            this.label17.TabIndex = 44;
-            this.label17.Text = "Employee Registration";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewButtonColumn1,
-            this.dataGridViewButtonColumn2});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 362);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(919, 195);
-            this.dataGridView1.TabIndex = 46;
-            // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "admin_id";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "leave_his_id";
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // dataGridViewTextBoxColumn2
+            // Employee_Name
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "admin_fname";
-            this.dataGridViewTextBoxColumn2.HeaderText = "First Name";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
+            this.Employee_Name.DataPropertyName = "employee_name";
+            this.Employee_Name.HeaderText = "Employee Name";
+            this.Employee_Name.Name = "Employee_Name";
             // 
-            // dataGridViewTextBoxColumn3
+            // leave_type
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "admin_lname";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Last Name";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.leave_type.DataPropertyName = "leave_type";
+            this.leave_type.HeaderText = "Leave Type";
+            this.leave_type.Name = "leave_type";
             // 
-            // dataGridViewTextBoxColumn4
+            // leave_purpose
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "admin_email";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.leave_purpose.DataPropertyName = "leave_purpose";
+            this.leave_purpose.HeaderText = "Leave Purpose";
+            this.leave_purpose.Name = "leave_purpose";
             // 
-            // dataGridViewTextBoxColumn5
+            // leave_start_date
             // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "admin_status";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.leave_start_date.DataPropertyName = "leave_his_start_datetime";
+            this.leave_start_date.HeaderText = "Start Date";
+            this.leave_start_date.Name = "leave_start_date";
             // 
-            // dataGridViewButtonColumn1
+            // leave_end_date
             // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewButtonColumn1.HeaderText = "Update";
-            this.dataGridViewButtonColumn1.MinimumWidth = 6;
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "Update";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.leave_end_date.DataPropertyName = "leave_his_end_datetime";
+            this.leave_end_date.HeaderText = "End Date";
+            this.leave_end_date.Name = "leave_end_date";
             // 
-            // dataGridViewButtonColumn2
+            // leave_count
             // 
-            this.dataGridViewButtonColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewButtonColumn2.HeaderText = "Delete";
-            this.dataGridViewButtonColumn2.MinimumWidth = 6;
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn2.Text = "Delete";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.leave_count.DataPropertyName = "leave_his_count";
+            this.leave_count.HeaderText = "Leave Count";
+            this.leave_count.Name = "leave_count";
+            // 
+            // approve
+            // 
+            this.approve.HeaderText = "Approve";
+            this.approve.Name = "approve";
+            this.approve.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.approve.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // reject
+            // 
+            this.reject.HeaderText = "Reject";
+            this.reject.Name = "reject";
+            this.reject.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.reject.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Admin_Registration
             // 
@@ -871,11 +1047,15 @@
             this.panel2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.emp_datagrid_view)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.leave_request.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.leave_request_gridview)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,7 +1090,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage leave_request;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Label admin_email_lbl;
@@ -920,32 +1100,49 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox emp_lname_txt;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox emp_fname_txt;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox gender_box;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dob_datepicker;
+        private System.Windows.Forms.TextBox emp_contact_txt;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox emp_type_box;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox emp_email_txt;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox emp_password_txt;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button add_emp_btn;
+        private System.Windows.Forms.Button emp_refresh_btn;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridView emp_datagrid_view;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Fname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Lname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emp_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Emp_Type;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emp_email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emp_gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emp_contact_no;
+        private System.Windows.Forms.DataGridView leave_request_gridview;
+        private System.Windows.Forms.Button leave_request_refresh_btn;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Employee_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leave_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leave_purpose;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leave_start_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leave_end_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn leave_count;
+        private System.Windows.Forms.DataGridViewButtonColumn approve;
+        private System.Windows.Forms.DataGridViewButtonColumn reject;
     }
 }

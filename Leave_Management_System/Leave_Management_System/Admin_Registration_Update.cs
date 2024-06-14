@@ -45,8 +45,6 @@ namespace Leave_Management_System
             email = email_txt.Text;
             DateTime currentDateTime = DateTime.Now;
 
-            
-
             try
             {
                 

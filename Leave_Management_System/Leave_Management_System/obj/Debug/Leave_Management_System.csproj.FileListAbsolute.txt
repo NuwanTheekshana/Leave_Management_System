@@ -11,3 +11,4 @@ D:\Project\Desktop Application\Leave_Management_System\Leave_Management_System\o
 D:\Project\Desktop Application\Leave_Management_System\Leave_Management_System\obj\Debug\Leave_Management_System.Admin_Registration.resources
 D:\Project\Desktop Application\Leave_Management_System\Leave_Management_System\obj\Debug\Leave_Management_System.Login.resources
 D:\Project\Desktop Application\Leave_Management_System\Leave_Management_System\obj\Debug\Leave_Management_System.Admin_User_Update_Form.resources
+D:\Project\Desktop Application\Leave_Management_System\Leave_Management_System\obj\Debug\Leave_Management_System.Emp_Registration_Update.resources
