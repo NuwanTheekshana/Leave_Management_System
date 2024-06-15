@@ -44,8 +44,6 @@ namespace Leave_Management_System
             show_pending_approval_home();
 
             report_emp_id_txt.Enabled = false;
-            start_datetime_picker.Enabled = false;
-            end_datetime_picker.Enabled = false;
 
 
         }
@@ -490,6 +488,9 @@ namespace Leave_Management_System
         private void view_report_Click(object sender, EventArgs e)
         {
 
+            string startDate = start_datetime_picker.Value.ToString("yyyy-MM-dd");
+            string endDate = end_datetime_picker.Value.ToString("yyyy-MM-dd");
+
             if (report_type_combo.Text == "")
             {
                 MessageBox.Show("Please select report type..!");
@@ -499,7 +500,7 @@ namespace Leave_Management_System
             {
                 try
                 {
-                    string Query = "SELECT * FROM leave_his_vm";
+                    string Query = "SELECT * FROM leave_his_vm where FORMAT(leave_his_start_datetime, 'yyyy-MM-dd') between  '"+startDate+"' and '"+endDate+"'";
                     DataTable data = Con.GetData(Query);
                     if (data == null)
                     {
@@ -516,11 +517,13 @@ namespace Leave_Management_System
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
-            else
+            else if (report_type_combo.Text == "Employee Report")
             {
-                string startDate = start_datetime_picker.Value.ToString("yyyy-MM-dd");
-                string endDate = end_datetime_picker.Value.ToString("yyyy-MM-dd");
 
+                if (report_emp_id_txt.Text == "")
+                {
+                    MessageBox.Show("Please enter the employee id..!");
+                }
 
                 try
                 {
@@ -557,14 +560,10 @@ namespace Leave_Management_System
             if (report_type_combo.Text == "Full Report")
             {
                 report_emp_id_txt.Enabled = false;
-                start_datetime_picker.Enabled = false;
-                end_datetime_picker.Enabled = false;
             }
             else
             {
                 report_emp_id_txt.Enabled = true;
-                start_datetime_picker.Enabled = true;
-                end_datetime_picker.Enabled = true;
             }
         }
 
