@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="leave_management_dbDataSet" targetNamespace="http://tempuri.org/leave_management_dbDataSet.xsd" xmlns:mstns="http://tempuri.org/leave_management_dbDataSet.xsd" xmlns="http://tempuri.org/leave_management_dbDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="leave_management_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="leave_management_dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Leave_Management_System.Properties.Settings.GlobalReference.Default.leave_management_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="leave_his_vmTableAdapter" GeneratorDataComponentClassName="leave_his_vmTableAdapter" Name="leave_his_vm" UserDataComponentName="leave_his_vmTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="leave_management_dbConnectionString (Settings)" DbObjectName="leave_management_db.dbo.leave_his_vm" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT leave_his_id, emp_id, employee_name, leave_type, leave_purpose, leave_his_start_datetime, leave_his_end_datetime, leave_his_count, leave_status, approved_or_rejected_by, leave_request_date FROM dbo.leave_his_vm</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="leave_his_id" DataSetColumn="leave_his_id" />
+              <Mapping SourceColumn="emp_id" DataSetColumn="emp_id" />
+              <Mapping SourceColumn="employee_name" DataSetColumn="employee_name" />
+              <Mapping SourceColumn="leave_type" DataSetColumn="leave_type" />
+              <Mapping SourceColumn="leave_purpose" DataSetColumn="leave_purpose" />
+              <Mapping SourceColumn="leave_his_start_datetime" DataSetColumn="leave_his_start_datetime" />
+              <Mapping SourceColumn="leave_his_end_datetime" DataSetColumn="leave_his_end_datetime" />
+              <Mapping SourceColumn="leave_his_count" DataSetColumn="leave_his_count" />
+              <Mapping SourceColumn="leave_status" DataSetColumn="leave_status" />
+              <Mapping SourceColumn="approved_or_rejected_by" DataSetColumn="approved_or_rejected_by" />
+              <Mapping SourceColumn="leave_request_date" DataSetColumn="leave_request_date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="leave_management_dbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="leave_management_dbDataSet" msprop:Generator_DataSetName="leave_management_dbDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="leave_his_vm" msprop:Generator_RowEvHandlerName="leave_his_vmRowChangeEventHandler" msprop:Generator_RowDeletedName="leave_his_vmRowDeleted" msprop:Generator_RowDeletingName="leave_his_vmRowDeleting" msprop:Generator_RowEvArgName="leave_his_vmRowChangeEvent" msprop:Generator_TablePropName="leave_his_vm" msprop:Generator_RowChangedName="leave_his_vmRowChanged" msprop:Generator_RowChangingName="leave_his_vmRowChanging" msprop:Generator_TableClassName="leave_his_vmDataTable" msprop:Generator_RowClassName="leave_his_vmRow" msprop:Generator_TableVarName="tableleave_his_vm" msprop:Generator_UserTableName="leave_his_vm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="leave_his_id" msprop:Generator_ColumnPropNameInRow="leave_his_id" msprop:Generator_ColumnPropNameInTable="leave_his_idColumn" msprop:Generator_ColumnVarNameInTable="columnleave_his_id" msprop:Generator_UserColumnName="leave_his_id" type="xs:int" />
+              <xs:element name="emp_id" msprop:Generator_ColumnPropNameInRow="emp_id" msprop:Generator_ColumnPropNameInTable="emp_idColumn" msprop:Generator_ColumnVarNameInTable="columnemp_id" msprop:Generator_UserColumnName="emp_id" type="xs:int" />
+              <xs:element name="employee_name" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="employee_name" msprop:Generator_ColumnPropNameInTable="employee_nameColumn" msprop:Generator_ColumnVarNameInTable="columnemployee_name" msprop:Generator_UserColumnName="employee_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="leave_type" msprop:Generator_ColumnPropNameInRow="leave_type" msprop:Generator_ColumnPropNameInTable="leave_typeColumn" msprop:Generator_ColumnVarNameInTable="columnleave_type" msprop:Generator_UserColumnName="leave_type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="leave_purpose" msprop:Generator_ColumnPropNameInRow="leave_purpose" msprop:Generator_ColumnPropNameInTable="leave_purposeColumn" msprop:Generator_ColumnVarNameInTable="columnleave_purpose" msprop:Generator_UserColumnName="leave_purpose" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="leave_his_start_datetime" msprop:Generator_ColumnPropNameInRow="leave_his_start_datetime" msprop:Generator_ColumnPropNameInTable="leave_his_start_datetimeColumn" msprop:Generator_ColumnVarNameInTable="columnleave_his_start_datetime" msprop:Generator_UserColumnName="leave_his_start_datetime" type="xs:dateTime" />
+              <xs:element name="leave_his_end_datetime" msprop:Generator_ColumnPropNameInRow="leave_his_end_datetime" msprop:Generator_ColumnPropNameInTable="leave_his_end_datetimeColumn" msprop:Generator_ColumnVarNameInTable="columnleave_his_end_datetime" msprop:Generator_UserColumnName="leave_his_end_datetime" type="xs:dateTime" />
+              <xs:element name="leave_his_count" msprop:Generator_ColumnPropNameInRow="leave_his_count" msprop:Generator_ColumnPropNameInTable="leave_his_countColumn" msprop:Generator_ColumnVarNameInTable="columnleave_his_count" msprop:Generator_UserColumnName="leave_his_count" type="xs:int" />
+              <xs:element name="leave_status" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="leave_status" msprop:Generator_ColumnPropNameInTable="leave_statusColumn" msprop:Generator_ColumnVarNameInTable="columnleave_status" msprop:Generator_UserColumnName="leave_status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="approved_or_rejected_by" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="approved_or_rejected_by" msprop:Generator_ColumnPropNameInTable="approved_or_rejected_byColumn" msprop:Generator_ColumnVarNameInTable="columnapproved_or_rejected_by" msprop:Generator_UserColumnName="approved_or_rejected_by" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="201" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="leave_request_date" msprop:Generator_ColumnPropNameInRow="leave_request_date" msprop:Generator_ColumnPropNameInTable="leave_request_dateColumn" msprop:Generator_ColumnVarNameInTable="columnleave_request_date" msprop:Generator_UserColumnName="leave_request_date" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,12 @@
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\bin\Debug\Leave_Management_System-Employee.exe.config
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\bin\Debug\Leave_Management_System-Employee.exe
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\bin\Debug\Leave_Management_System-Employee.pdb
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.csproj.AssemblyReference.cache
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.csproj.SuggestedBindingRedirects.cache
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System_Employee.Emp_Page.resources
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System_Employee.Login_page.resources
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System_Employee.Properties.Resources.resources
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.csproj.GenerateResource.cache
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.csproj.CoreCompileInputs.cache
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.exe
+D:\Project\Desktop Application\Leave_Management_System-Employee\Leave_Management_System-Employee\obj\Debug\Leave_Management_System-Employee.pdb

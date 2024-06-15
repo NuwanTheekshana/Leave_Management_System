@@ -51,6 +51,7 @@ namespace Leave_Management_System
                 string Query = "Update Admin_tbl set admin_fname = '{0}', admin_lname = '{1}', admin_email = '{2}', admin_updated_date = '{3}' where admin_id = '{4}'";
                 Query = string.Format(Query, fname, lname, email, currentDateTime, id);
                 Con.SetData(Query);
+
                 MessageBox.Show("Admin user update successfully..!");
                 
                 this.Close();

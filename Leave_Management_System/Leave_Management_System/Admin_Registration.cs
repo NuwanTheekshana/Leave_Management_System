@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,7 @@ namespace Leave_Management_System
             admin_id_lbl.Text = Login.admin_id + "";
             admin_email_lbl.Text = Login.admin_email;
             admin_username_lbl.Text = Login.admin_username;
+            username_lbl.Text = Login.admin_username;
         }
 
         //Form Load
@@ -37,6 +39,15 @@ namespace Leave_Management_System
             Show_admin_list();
             Show_emp_list();
             Show_leave_request();
+            Show_leave_type_list();
+            this.reportViewer1.RefreshReport();
+            show_pending_approval_home();
+
+            report_emp_id_txt.Enabled = false;
+            start_datetime_picker.Enabled = false;
+            end_datetime_picker.Enabled = false;
+
+
         }
         public void Show_admin_list()
         {
@@ -44,25 +55,23 @@ namespace Leave_Management_System
             AdminListGrid.DataSource = Con.GetData(Query);
         }
 
+        
+
         public void Show_emp_list()
         {
             string Query = "select emp_id, emp_fname, emp_lname, emp_email, (case when emp_status = 1 then 'Active' else 'Inactive' end) as emp_status, emp_type, emp_gender, emp_birth_day, emp_contact_no from Employee_tbl where emp_status = 1";
             emp_datagrid_view.DataSource = Con.GetData(Query);
         }
 
+        public void Show_leave_type_list()
+        {
+            string Query = "select leave_id, leave_type, leave_emp_type, leave_count, (case when leave_status = 1 then 'Active' else 'Inactive' end) as leave_status from Leave_tbl where leave_status = 1";
+            leave_type_list_datagridview.DataSource = Con.GetData(Query);
+        }
+
         public void Show_leave_request()
         {
-            string Query = "select lh.leave_his_id," +
-                            "et.emp_fname+' '+et.emp_lname as employee_name," +
-                            "l.leave_type," +
-                            "lh.leave_purpose," +
-                            "lh.leave_his_start_datetime," +
-                            "lh.leave_his_end_datetime," +
-                            "lh.leave_his_count" +
-                            "from Leave_his_tbl lh, Employee_tbl et, Leave_tbl l" +
-                            "where lh.emp_id = et.emp_id" +
-                            "and lh.leave_id = l.leave_id" +
-                            "and lh.leave_his_status = '1'";
+            string Query = "select lh.leave_his_id, (et.emp_fname+' '+et.emp_lname) employee_name, l.leave_type, lh.leave_purpose, lh.leave_his_start_datetime, lh.leave_his_end_datetime, lh.leave_his_count from Leave_his_tbl lh, Employee_tbl et, Leave_tbl l where lh.emp_id = et.emp_id and lh.leave_id = l.leave_id and lh.leave_his_status = '1'";
             leave_request_gridview.DataSource = Con.GetData(Query);
         }
 
@@ -281,24 +290,287 @@ namespace Leave_Management_System
             }
         }
 
+        private void add_leave_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (leave_type_combox.Text == "" || emp_type_combox.Text == "" || leave_count_txt.Text == "")
+                {
+                    MessageBox.Show("Missing Data..!");
+                }
+                else
+                {
+                    string leave_type = leave_type_combox.Text;
+                    string emp_type = emp_type_combox.Text;
+                    int leave_count = Convert.ToInt32(leave_count_txt.Text);
+                    int admin_id = Convert.ToInt32(admin_id_lbl.Text);
+
+                    string Query = "insert into Leave_tbl(leave_type, leave_emp_type, leave_count, leave_created_by) values('{0}', '{1}', '{2}', '{3}')";
+                    Query = string.Format(Query, leave_type, emp_type, leave_count, admin_id);
+                    Con.SetData(Query);
+
+                    MessageBox.Show("Leave details added successfully..!");
+
+                    Show_leave_type_list();
+                    leave_type_combox.Text = "";
+                    emp_type_combox.Text = "";
+                    leave_count_txt.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void emp_contact_txt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void emp_contact_txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void leave_request_refresh_btn_Click(object sender, EventArgs e)
         {
             Show_leave_request();
+        }
+
+ 
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leave_type_list_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (leave_type_list_datagridview.Columns[e.ColumnIndex].HeaderText == "Update")
+            {
+                int id, admin_id;
+                string leave_type, leave_emp_type, emp_leave_count;
+
+                id = Convert.ToInt32(leave_type_list_datagridview.Rows[e.RowIndex].Cells["leave_id"].Value);
+                leave_type = Convert.ToString(leave_type_list_datagridview.Rows[e.RowIndex].Cells["leave_type_name"].Value);
+                leave_emp_type = Convert.ToString(leave_type_list_datagridview.Rows[e.RowIndex].Cells["Leave_emp_type"].Value);
+                emp_leave_count = Convert.ToString(leave_type_list_datagridview.Rows[e.RowIndex].Cells["emp_leave_count"].Value);
+                admin_id = Convert.ToInt32(admin_id_lbl.Text);
+
+                Leave_Type_List_Update_Form leave_Update_Form = new Leave_Type_List_Update_Form(id, leave_type, leave_emp_type, emp_leave_count, admin_id);
+                leave_Update_Form.ShowDialog();
+            }
+
+
+
+            if (leave_type_list_datagridview.Columns[e.ColumnIndex].HeaderText == "Delete")
+            {
+
+                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this user", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    int id, admin_id;
+                    id = Convert.ToInt32(leave_type_list_datagridview.Rows[e.RowIndex].Cells["leave_id"].Value);
+                    admin_id = Convert.ToInt32(admin_id_lbl.Text);
+
+                    try
+                    {
+                        string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        string Query = "Update Leave_tbl set leave_status = 0, leave_updated_date = '{0}', leave_updated_by = '{1}' where leave_id = '{2}'";
+                        Query = string.Format(Query, currentDateTime, admin_id, id);
+                        Con.SetData(Query);
+
+                        MessageBox.Show("Leave delete successfully..!");
+                        Show_leave_type_list();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+        }
+
+        public void show_pending_approval_home()
+        {
+            // Anual Leaves
+            string anual_leave_count_query = "select count(leave_his_id) leave_count from Leave_his_tbl where leave_his_status = 1 and leave_id in ('1', '4')";
+            DataTable anual_leave_count = Con.GetData(anual_leave_count_query);
+            var anualleaveCount = anual_leave_count.Rows[0]["leave_count"];
+
+            anual_leave_count_lbl.Text = anualleaveCount.ToString();
+
+            // Casual Leaves
+            string casual_leave_count_query = "select count(leave_his_id) leave_count from Leave_his_tbl where leave_his_status = 1 and leave_id in ('2', '5')";
+            DataTable casual_leave_count = Con.GetData(casual_leave_count_query);
+            var casualleaveCount = casual_leave_count.Rows[0]["leave_count"];
+
+            casual_leave_count_lbl.Text = casualleaveCount.ToString();
+
+            // Short Leaves
+            string short_leave_count_query = "select count(leave_his_id) leave_count from Leave_his_tbl where leave_his_status = 1 and leave_id in ('3', '6')";
+            DataTable short_leave_count = Con.GetData(short_leave_count_query);
+            var shortleaveCount = short_leave_count.Rows[0]["leave_count"];
+
+            short_leave_count_lbl.Text = shortleaveCount.ToString();
+
+
+        }
+
+        private void leave_refresh_btn_Click(object sender, EventArgs e)
+        {
+            Show_leave_type_list();
+        }
+
+        private void leave_request_gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (leave_request_gridview.Columns[e.ColumnIndex].HeaderText == "Approve")
+            {
+
+                DialogResult confirm = MessageBox.Show("Are you sure you want to approve this leave request", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    int id, admin_id;
+                    id = Convert.ToInt32(leave_request_gridview.Rows[e.RowIndex].Cells["leave_his_id"].Value);
+                    admin_id = Convert.ToInt32(admin_id_lbl.Text);
+
+                    try
+                    {
+                        string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        string Query = "Update Leave_his_tbl set leave_his_status = 2, leave_his_updated_date = '{0}', leave_his_approved_by = '{1}' where leave_his_id = '{2}'";
+                        Query = string.Format(Query, currentDateTime, admin_id, id);
+                        Con.SetData(Query);
+
+                        MessageBox.Show("Leave request approved successfully..!");
+                        Show_leave_request();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+
+            if (leave_request_gridview.Columns[e.ColumnIndex].HeaderText == "Reject")
+            {
+
+                DialogResult confirm = MessageBox.Show("Are you sure you want to reject this leave request", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    int id, admin_id;
+                    id = Convert.ToInt32(leave_request_gridview.Rows[e.RowIndex].Cells["leave_his_id"].Value);
+                    admin_id = Convert.ToInt32(admin_id_lbl.Text);
+
+                    try
+                    {
+                        string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        string Query = "Update Leave_his_tbl set leave_his_status = 3, leave_his_updated_date = '{0}', leave_his_approved_by = '{1}' where leave_his_id = '{2}'";
+                        Query = string.Format(Query, currentDateTime, admin_id, id);
+                        Con.SetData(Query);
+
+                        MessageBox.Show("Leave request rejected..!");
+                        Show_leave_request();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+        }
+
+
+        private void report_tab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void view_report_Click(object sender, EventArgs e)
+        {
+
+            if (report_type_combo.Text == "")
+            {
+                MessageBox.Show("Please select report type..!");
+            }
+
+            if (report_type_combo.Text == "Full Report")
+            {
+                try
+                {
+                    string Query = "SELECT * FROM leave_his_vm";
+                    DataTable data = Con.GetData(Query);
+                    if (data == null)
+                    {
+                        throw new Exception("Data retrieval failed. Data is null.");
+                    }
+
+                    ReportDataSource source = new ReportDataSource("DataSet1", data);
+                    this.reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.DataSources.Add(source);
+                    reportViewer1.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+            }
+            else
+            {
+                string startDate = start_datetime_picker.Value.ToString("yyyy-MM-dd");
+                string endDate = end_datetime_picker.Value.ToString("yyyy-MM-dd");
+
+
+                try
+                {
+                    string Query = "SELECT * FROM leave_his_vm where emp_id = '"+ report_emp_id_txt .Text+ "' and FORMAT(leave_his_start_datetime, 'yyyy-MM-dd') between  '"+startDate+"' and '"+endDate+"'";
+                    DataTable data = Con.GetData(Query);
+                    if (data == null)
+                    {
+                        throw new Exception("Data retrieval failed. Data is null.");
+                    }
+
+                    ReportDataSource source = new ReportDataSource("DataSet1", data);
+                    this.reportViewer1.LocalReport.DataSources.Clear();
+                    reportViewer1.LocalReport.DataSources.Add(source);
+                    reportViewer1.RefreshReport();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+            }
+
+
+
+
+        }
+
+        private void report_type_combo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void report_type_combo_TextChanged(object sender, EventArgs e)
+        {
+            if (report_type_combo.Text == "Full Report")
+            {
+                report_emp_id_txt.Enabled = false;
+                start_datetime_picker.Enabled = false;
+                end_datetime_picker.Enabled = false;
+            }
+            else
+            {
+                report_emp_id_txt.Enabled = true;
+                start_datetime_picker.Enabled = true;
+                end_datetime_picker.Enabled = true;
+            }
+        }
+
+        private void report_emp_id_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void emp_refresh_btn_Click(object sender, EventArgs e)

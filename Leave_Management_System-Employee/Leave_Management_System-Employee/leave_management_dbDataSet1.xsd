@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="leave_management_dbDataSet1" targetNamespace="http://tempuri.org/leave_management_dbDataSet1.xsd" xmlns:mstns="http://tempuri.org/leave_management_dbDataSet1.xsd" xmlns="http://tempuri.org/leave_management_dbDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="leave_management_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="leave_management_dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Leave_Management_System_Employee.Properties.Settings.GlobalReference.Default.leave_management_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="leave_typeTableAdapter" GeneratorDataComponentClassName="leave_typeTableAdapter" Name="leave_type" UserDataComponentName="leave_typeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="leave_management_dbConnectionString (Settings)" DbObjectName="leave_management_db.dbo.leave_type" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT leave_type FROM dbo.leave_type</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="leave_type" DataSetColumn="leave_type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="leave_management_dbDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="leave_management_dbDataSet1" msprop:Generator_DataSetName="leave_management_dbDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="leave_type" msprop:Generator_RowEvHandlerName="leave_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="leave_typeRowDeleted" msprop:Generator_RowDeletingName="leave_typeRowDeleting" msprop:Generator_RowEvArgName="leave_typeRowChangeEvent" msprop:Generator_TablePropName="leave_type" msprop:Generator_RowChangedName="leave_typeRowChanged" msprop:Generator_RowChangingName="leave_typeRowChanging" msprop:Generator_TableClassName="leave_typeDataTable" msprop:Generator_RowClassName="leave_typeRow" msprop:Generator_TableVarName="tableleave_type" msprop:Generator_UserTableName="leave_type">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="leave_type" msprop:Generator_ColumnPropNameInRow="leave_type" msprop:Generator_ColumnPropNameInTable="leave_typeColumn" msprop:Generator_ColumnVarNameInTable="columnleave_type" msprop:Generator_UserColumnName="leave_type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
